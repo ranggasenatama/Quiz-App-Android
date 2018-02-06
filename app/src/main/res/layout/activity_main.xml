@@ -31,14 +31,11 @@
         android:layout_marginTop="16dp"
         android:background="@color/colorAccent"
         android:backgroundTint="@color/colorAccent"
-        android:fontFamily="serif"
-        android:lineSpacingExtra="24sp"
+        android:lineSpacingExtra="36sp"
         android:padding="15dp"
         android:text="30s"
-        android:textAppearance="@android:style/TextAppearance.Holo.Light.Large"
         android:textColor="@color/colorPrimary"
         android:textSize="36sp"
-        android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,14 +46,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
         android:background="?android:attr/colorMultiSelectHighlight"
-        android:fontFamily="serif"
-        android:lineSpacingExtra="14sp"
         android:padding="15dp"
         android:text="0/0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title.Media"
-        android:textColor="@android:color/holo_green_light"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
-        android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
