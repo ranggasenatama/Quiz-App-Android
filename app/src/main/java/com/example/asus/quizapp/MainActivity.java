@@ -96,12 +96,15 @@ public class MainActivity extends AppCompatActivity {
         new CountDownTimer(30100,1000){
             @Override
             public void onTick(long millisUntilFinished) {
-                timerTextView.setText(Long.toString(millisUntilFinished/1000));
+                timerTextView.setText(Long.toString(millisUntilFinished/1000)+"s");
             }
 
             @Override
             public void onFinish() {
-
+                double persentage = (score/numberOfQuestion)*100;
+                persentage = Math.floor(persentage * 100) / 100;
+                answerTextView.setText("You Got " + persentage + "% correct");
+                answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
             }
         }.start();
     }
