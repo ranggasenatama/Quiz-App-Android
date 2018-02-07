@@ -52,10 +52,10 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/asus/quizapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="473">
+              <caret line="89" column="53" lean-forward="false" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
               <folding>
-                <element signature="e#375#384#0" expanded="true" />
+                <element signature="e#400#409#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1798,8 +1798,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/asus/quizapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/asus/quizapp/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1996,7 +1996,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518001910886" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518003073523" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2096,7 +2096,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518001910886" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518003073523" />
       </method>
     </configuration>
     <list size="1">
@@ -2200,7 +2200,7 @@
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#375#384#0" expanded="true" />
+            <element signature="e#400#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2221,7 +2221,7 @@
         <state relative-caret-position="187">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
-            <element signature="e#375#384#0" expanded="true" />
+            <element signature="e#400#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2242,7 +2242,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#375#384#0" expanded="true" />
+            <element signature="e#400#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2327,6 +2327,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-26/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5493" column="0" lean-forward="false" selection-start-line="5493" selection-start-column="0" selection-end-line="5493" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -2340,10 +2348,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/asus/quizapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="473">
+          <caret line="89" column="53" lean-forward="false" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
           <folding>
-            <element signature="e#375#384#0" expanded="true" />
+            <element signature="e#400#409#0" expanded="true" />
           </folding>
         </state>
       </provider>

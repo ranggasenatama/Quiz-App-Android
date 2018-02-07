@@ -2,6 +2,7 @@ package com.example.asus.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,8 +15,13 @@ public class MainActivity extends AppCompatActivity {
 
     List<Integer> listAnswer = new ArrayList<Integer>();
     Button button;
+    Button answerButton1;
+    Button answerButton2;
+    Button answerButton3;
+    Button answerButton4;
     TextView answerTextView;
     TextView rightOrFalseTextView;
+    TextView sumTextView;
     int shuffABC;
     int score=0;
     int numberOfQuestion=0;
@@ -32,28 +38,12 @@ public class MainActivity extends AppCompatActivity {
         numberOfQuestion++;
         rightOrFalseTextView.setText(score+"/"+numberOfQuestion);
         answerTextView.setVisibility(View.VISIBLE);
+        newQuestion();
     }
 
-    public void clickStartQuiz(View view) {
-        button.setVisibility(View.INVISIBLE);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        button = findViewById(R.id.startQuizButton);
-        answerTextView = findViewById(R.id.answerTextView);
-        rightOrFalseTextView = findViewById(R.id.rightFalseTextView);
-        Button answerButton1 = (Button) findViewById(R.id.button1);
-        Button answerButton2 = (Button) findViewById(R.id.button2);
-        Button answerButton3 = (Button) findViewById(R.id.button3);
-        Button answerButton4 = (Button) findViewById(R.id.button4);
-        TextView sumTextView = (TextView) findViewById(R.id.sumTextView);
-
+    public void newQuestion(){
+        listAnswer.clear();
         Random random = new Random();
-        answerTextView.setVisibility(View.INVISIBLE);
 
         int nilai1 = random.nextInt(50);
         int nilai2 = random.nextInt(50);
@@ -77,6 +67,28 @@ public class MainActivity extends AppCompatActivity {
         answerButton2.setText(Integer.toString(listAnswer.get(1)));
         answerButton3.setText(Integer.toString(listAnswer.get(2)));
         answerButton4.setText(Integer.toString(listAnswer.get(3)));
+    }
 
+    public void clickStartQuiz(View view) {
+        button.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button = findViewById(R.id.startQuizButton);
+        answerTextView = findViewById(R.id.answerTextView);
+        rightOrFalseTextView = findViewById(R.id.rightFalseTextView);
+        answerButton1 = (Button) findViewById(R.id.button1);
+        answerButton2 = (Button) findViewById(R.id.button2);
+        answerButton3 = (Button) findViewById(R.id.button3);
+        answerButton4 = (Button) findViewById(R.id.button4);
+        sumTextView = (TextView) findViewById(R.id.sumTextView);
+
+        answerTextView.setVisibility(View.INVISIBLE);
+
+        newQuestion();
     }
 }
