@@ -24,9 +24,39 @@ public class MainActivity extends AppCompatActivity {
     TextView answerTextView;
     TextView rightOrFalseTextView;
     TextView sumTextView;
+    TextView timerTextView;
     int shuffABC;
-    int score=0;
-    int numberOfQuestion=0;
+    int score = 0;
+    int numberOfQuestion = 0;
+
+    public void playAgain(View view) {
+        score = 0;
+        numberOfQuestion = 0;
+        timerTextView.setText("30s");
+        rightOrFalseTextView.setText(score + "/" + numberOfQuestion);
+        playAgain.setVisibility(View.INVISIBLE);
+        answerTextView.setVisibility(View.INVISIBLE);
+
+        newQuestion();
+
+        new CountDownTimer(30100, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText(Long.toString(millisUntilFinished / 1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                double persentage = score;
+                persentage = persentage / numberOfQuestion;
+                persentage *= 100;
+                persentage = Math.floor(persentage * 100) / 100;
+                answerTextView.setText("You Got " + persentage + "% correct");
+                answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
+                playAgain.setVisibility(View.VISIBLE);
+            }
+        }.start();
+    }
 
     public void clickAnswer(View view) {
         if (view.getTag().toString().equals(Integer.toString(shuffABC + 1))) {
@@ -38,16 +68,12 @@ public class MainActivity extends AppCompatActivity {
             answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
         }
         numberOfQuestion++;
-        rightOrFalseTextView.setText(score+"/"+numberOfQuestion);
+        rightOrFalseTextView.setText(score + "/" + numberOfQuestion);
         answerTextView.setVisibility(View.VISIBLE);
         newQuestion();
     }
 
-    public void playAgain(View view){
-
-    }
-
-    public void newQuestion(){
+    public void newQuestion() {
         listAnswer.clear();
         Random random = new Random();
 
@@ -93,28 +119,10 @@ public class MainActivity extends AppCompatActivity {
         answerButton4 = (Button) findViewById(R.id.button4);
         sumTextView = (TextView) findViewById(R.id.sumTextView);
         playAgain = (Button) findViewById(R.id.playAgainButton);
-        final TextView timerTextView = (TextView) findViewById(R.id.timerTextView);
+        timerTextView = (TextView) findViewById(R.id.timerTextView);
 
         answerTextView.setVisibility(View.INVISIBLE);
 
-        newQuestion();
-
-        new CountDownTimer(30100,1000){
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timerTextView.setText(Long.toString(millisUntilFinished/1000)+"s");
-            }
-
-            @Override
-            public void onFinish() {
-                double persentage = score;
-                persentage=persentage/numberOfQuestion;
-                persentage*=100;
-                persentage = Math.floor(persentage * 100) / 100;
-                answerTextView.setText("You Got " + persentage + "% correct");
-                answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
-                playAgain.setVisibility(View.VISIBLE);
-            }
-        }.start();
+        playAgain(findViewById(R.id.timerTextView));
     }
 }
