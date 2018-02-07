@@ -13,18 +13,24 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     List<Integer> listAnswer = new ArrayList<Integer>();
-    int shuffABC;
     Button button;
     TextView answerTextView;
+    TextView rightOrFalseTextView;
+    int shuffABC;
+    int score=0;
+    int numberOfQuestion=0;
 
     public void clickAnswer(View view) {
         if (view.getTag().toString().equals(Integer.toString(shuffABC + 1))) {
             answerTextView.setText("CORRECT!!");
             answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
+            score++;
         } else {
             answerTextView.setText("INCORECT!!");
             answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
         }
+        numberOfQuestion++;
+        rightOrFalseTextView.setText(score+"/"+numberOfQuestion);
         answerTextView.setVisibility(View.VISIBLE);
     }
 
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         button = findViewById(R.id.startQuizButton);
         answerTextView = findViewById(R.id.answerTextView);
+        rightOrFalseTextView = findViewById(R.id.rightFalseTextView);
         Button answerButton1 = (Button) findViewById(R.id.button1);
         Button answerButton2 = (Button) findViewById(R.id.button2);
         Button answerButton3 = (Button) findViewById(R.id.button3);
