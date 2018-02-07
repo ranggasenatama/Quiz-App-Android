@@ -1,5 +1,6 @@
 package com.example.asus.quizapp;
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,9 +87,22 @@ public class MainActivity extends AppCompatActivity {
         answerButton3 = (Button) findViewById(R.id.button3);
         answerButton4 = (Button) findViewById(R.id.button4);
         sumTextView = (TextView) findViewById(R.id.sumTextView);
+        final TextView timerTextView = (TextView) findViewById(R.id.timerTextView);
 
         answerTextView.setVisibility(View.INVISIBLE);
 
         newQuestion();
+
+        new CountDownTimer(30100,1000){
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText(Long.toString(millisUntilFinished/1000));
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
     }
 }
