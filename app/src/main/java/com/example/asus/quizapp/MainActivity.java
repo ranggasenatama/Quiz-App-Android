@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button answerButton2;
     Button answerButton3;
     Button answerButton4;
+    Button playAgain;
     TextView answerTextView;
     TextView rightOrFalseTextView;
     TextView sumTextView;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         rightOrFalseTextView.setText(score+"/"+numberOfQuestion);
         answerTextView.setVisibility(View.VISIBLE);
         newQuestion();
+    }
+
+    public void playAgain(View view){
+
     }
 
     public void newQuestion(){
@@ -87,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         answerButton3 = (Button) findViewById(R.id.button3);
         answerButton4 = (Button) findViewById(R.id.button4);
         sumTextView = (TextView) findViewById(R.id.sumTextView);
+        playAgain = (Button) findViewById(R.id.playAgainButton);
         final TextView timerTextView = (TextView) findViewById(R.id.timerTextView);
 
         answerTextView.setVisibility(View.INVISIBLE);
@@ -101,10 +107,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                double persentage = (score/numberOfQuestion)*100;
+                double persentage = score;
+                persentage=persentage/numberOfQuestion;
+                persentage*=100;
                 persentage = Math.floor(persentage * 100) / 100;
                 answerTextView.setText("You Got " + persentage + "% correct");
                 answerTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
+                playAgain.setVisibility(View.VISIBLE);
             }
         }.start();
     }
