@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.startQuizButton);
+        Button answerButton1 = (Button) findViewById(R.id.button1);
+        Button answerButton2 = (Button) findViewById(R.id.button2);
+        Button answerButton3 = (Button) findViewById(R.id.button3);
+        Button answerButton4 = (Button) findViewById(R.id.button4);
         TextView sumTextView = (TextView) findViewById(R.id.sumTextView);
 
         Random random = new Random();
@@ -62,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 listAnswer.add(acak);
             }
         }
+        answerButton1.setText(Integer.toString(listAnswer.get(0)));
+        answerButton2.setText(Integer.toString(listAnswer.get(1)));
+        answerButton3.setText(Integer.toString(listAnswer.get(2)));
+        answerButton4.setText(Integer.toString(listAnswer.get(3)));
 
     }
 }
