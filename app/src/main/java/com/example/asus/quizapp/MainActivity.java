@@ -1,6 +1,7 @@
 package com.example.asus.quizapp;
 
 import android.os.CountDownTimer;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -103,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickStartQuiz(View view) {
         button.setVisibility(View.INVISIBLE);
+        ConstraintLayout quizApp = (ConstraintLayout) findViewById(R.id.quizApp);
+        quizApp.setVisibility(View.VISIBLE);
     }
 
     @Override
