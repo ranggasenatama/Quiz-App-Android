@@ -92,6 +92,7 @@
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:background="@android:color/holo_blue_bright"
+            android:onClick="clickAnswer"
             android:tag="1"
             android:text="14"
             android:textSize="30sp" />
@@ -107,6 +108,7 @@
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:background="@android:color/holo_green_dark"
+            android:onClick="clickAnswer"
             android:tag="2"
             android:text="14"
             android:textSize="30sp" />
@@ -122,6 +124,7 @@
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="clickAnswer"
             android:tag="3"
             android:text="14"
             android:textSize="30sp" />
@@ -137,6 +140,7 @@
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:background="@color/colorAccent"
+            android:onClick="clickAnswer"
             android:tag="4"
             android:text="14"
             android:textSize="30sp" />
